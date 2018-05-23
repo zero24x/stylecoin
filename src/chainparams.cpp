@@ -91,11 +91,12 @@ public:
 
 		hashGenesisBlock = genesis.GetHash();
 
-		LogPrintf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
-		LogPrintf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
+		//LogPrintf("genesis.nNonce = %d\n", genesis.nNonce);
+		//LogPrintf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+		//LogPrintf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
 
-		//assert(genesis.hashMerkleRoot == uint256("0x57d79e9c7483d8aa66881e57f030c5d360b43f3c4f09f70901f0da1ea651adcf"));
-		//assert(hashGenesisBlock == uint256("0x00008184ae78eb4de72279df833d162177d07c5eaf91eee0cc481cf5823bcca514c3"));
+		assert(genesis.hashMerkleRoot == uint256("0x06e25e942e343e7df314a0a71fa7507cc14b6082c676393fe6fb8f68ce6af98b7"));
+		assert(hashGenesisBlock == uint256("0x0c6d474ab9565ec9caec3608009d4b593cd372bc921fa9f6993b073f52b5ec76b"));
 
 		base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 63);
 		base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 85);
@@ -148,12 +149,14 @@ public:
 		nDefaultPort = 15803;
 		nRPCPort = 63922;
 		strDataDir = "testnet";
+		hashGenesisBlock = genesis.GetHash();
 
 		// Modify the testnet genesis block so the timestamp is valid for a later start.
 		genesis.nBits = 520159231;
 		genesis.nNonce = 70685;
 
-		assert(hashGenesisBlock == uint256("0x00008184ae78eb4de72279df833d162177d07c5eaf91eee0cc481cf5823bcca514c3"));
+		//LogPrintf("TNgenesis.GetHash = %s\n", hashGenesisBlock.ToString().c_str());
+		assert(hashGenesisBlock == uint256("0x0c6d474ab9565ec9caec3608009d4b593cd372bc921fa9f6993b073f52b5ec76b"));
 
 		vFixedSeeds.clear();
 		vSeeds.clear();

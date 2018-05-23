@@ -83,6 +83,7 @@ extern CBlockIndex* pindexGenesisBlock;
 extern unsigned int nTargetSpacing;
 extern int nStakeMinConfirmations;
 extern unsigned int nStakeMinAge;
+extern unsigned int nTargetSpacing;
 extern unsigned int nNodeLifespan;
 extern int nCoinbaseMaturity;
 extern int nBestHeight;
