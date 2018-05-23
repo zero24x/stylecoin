@@ -1,0 +1,504 @@
+make -f Makefile.Release
+make[1]: Entering directory '/c/Users/wolfgang/Documents/Privat/Coins/Dev/StyleCoin/stylecoin'
+g++ -c -pipe -fno-keep-inline-dllexport -D_FORTIFY_SOURCE=2 -O2 -frtti -fdiagnostics-show-option -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -Wstack-protector -Wno-unused-variable -fpermissive -Wno-cpp -Wno-maybe-uninitialized -Wno-unused-local-typedefs -fexceptions -mthreads -DUNICODE -DENABLE_WALLET -DBOOST_THREAD_USE_LIB -DBOOST_SPIRIT_THREADSAFE -DQT_DISABLE_DEPRECATED_BEFORE=0 -DBOOST_VARIANT_USE_RELAXED_GET_BY_DEFAULT -DUSE_QRCODE -DUSE_UPNP=1 -DMINIUPNP_STATICLIB -DSTATICLIB -DWIN32 -D_MT -DBOOST_THREAD_PROVIDES_GENERIC_SHARED_MUTEX_ON_WIN -DQT_NO_DEBUG -DQT_PRINTSUPPORT_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_NEEDS_QMAIN -Isrc -Isrc/json -Isrc/qt -Isrc/qt/plugins/mrichtexteditor -Isrc/leveldb/include -Isrc/leveldb/helpers -IC:/devel/miniupnpc-1.9 -IC:/devel/boost_1_55_0 -IC:/devel/db-4.8.30 -IC:/devel/openssl-1.0.2o/include -IC:/devel/qrencode-3.4.4 -I/mingw32/include -IC:/devel/qt5.5.0-static/include -IC:/devel/qt5.5.0-static/include/QtPrintSupport -IC:/devel/qt5.5.0-static/include/QtWidgets -IC:/devel/qt5.5.0-static/include/QtGui -IC:/devel/qt5.5.0-static/include/QtNetwork -IC:/devel/qt5.5.0-static/include/QtCore -Ibuild -Ibuild -IC:/devel/qt5.5.0-static/mkspecs/win32-g++  -o build/main.o src/main.cpp
+In file included from C:/devel/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:32:0,
+                 from C:/devel/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from C:/devel/boost_1_55_0/boost/date_time/time_clock.hpp:17,
+                 from C:/devel/boost_1_55_0/boost/thread/thread_time.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/basic_timed_mutex.hpp:16,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/mutex.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/mutex.hpp:14,
+                 from src/allocators.h:9,
+                 from src/serialize.h:22,
+                 from src/core.h:9,
+                 from src/main.h:8,
+                 from src/main.cpp:6:
+C:/devel/boost_1_55_0/boost/smart_ptr/detail/shared_count.hpp:323:33: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+                                 ^~~~~~~~
+In file included from C:/msys64/mingw32/include/c++/7.3.0/memory:80:0,
+                 from C:/devel/boost_1_55_0/boost/config/no_tr1/memory.hpp:21,
+                 from C:/devel/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:27,
+                 from C:/devel/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from C:/devel/boost_1_55_0/boost/date_time/time_clock.hpp:17,
+                 from C:/devel/boost_1_55_0/boost/thread/thread_time.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/basic_timed_mutex.hpp:16,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/mutex.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/mutex.hpp:14,
+                 from src/allocators.h:9,
+                 from src/serialize.h:22,
+                 from src/core.h:9,
+                 from src/main.h:8,
+                 from src/main.cpp:6:
+C:/msys64/mingw32/include/c++/7.3.0/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from C:/devel/boost_1_55_0/boost/shared_ptr.hpp:17:0,
+                 from C:/devel/boost_1_55_0/boost/date_time/time_clock.hpp:17,
+                 from C:/devel/boost_1_55_0/boost/thread/thread_time.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/basic_timed_mutex.hpp:16,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/mutex.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/mutex.hpp:14,
+                 from src/allocators.h:9,
+                 from src/serialize.h:22,
+                 from src/core.h:9,
+                 from src/main.h:8,
+                 from src/main.cpp:6:
+C:/devel/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:247:65: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+ template< class T, class R > struct sp_enable_if_auto_ptr< std::auto_ptr< T >, R >
+                                                                 ^~~~~~~~
+In file included from C:/msys64/mingw32/include/c++/7.3.0/memory:80:0,
+                 from C:/devel/boost_1_55_0/boost/config/no_tr1/memory.hpp:21,
+                 from C:/devel/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:27,
+                 from C:/devel/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from C:/devel/boost_1_55_0/boost/date_time/time_clock.hpp:17,
+                 from C:/devel/boost_1_55_0/boost/thread/thread_time.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/basic_timed_mutex.hpp:16,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/mutex.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/mutex.hpp:14,
+                 from src/allocators.h:9,
+                 from src/serialize.h:22,
+                 from src/core.h:9,
+                 from src/main.h:8,
+                 from src/main.cpp:6:
+C:/msys64/mingw32/include/c++/7.3.0/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from C:/devel/boost_1_55_0/boost/shared_ptr.hpp:17:0,
+                 from C:/devel/boost_1_55_0/boost/date_time/time_clock.hpp:17,
+                 from C:/devel/boost_1_55_0/boost/thread/thread_time.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/basic_timed_mutex.hpp:16,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/mutex.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/mutex.hpp:14,
+                 from src/allocators.h:9,
+                 from src/serialize.h:22,
+                 from src/core.h:9,
+                 from src/main.h:8,
+                 from src/main.cpp:6:
+C:/devel/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:446:31: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+                               ^~~~~~~~
+In file included from C:/msys64/mingw32/include/c++/7.3.0/memory:80:0,
+                 from C:/devel/boost_1_55_0/boost/config/no_tr1/memory.hpp:21,
+                 from C:/devel/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:27,
+                 from C:/devel/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from C:/devel/boost_1_55_0/boost/date_time/time_clock.hpp:17,
+                 from C:/devel/boost_1_55_0/boost/thread/thread_time.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/basic_timed_mutex.hpp:16,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/mutex.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/mutex.hpp:14,
+                 from src/allocators.h:9,
+                 from src/serialize.h:22,
+                 from src/core.h:9,
+                 from src/main.h:8,
+                 from src/main.cpp:6:
+C:/msys64/mingw32/include/c++/7.3.0/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from C:/devel/boost_1_55_0/boost/shared_ptr.hpp:17:0,
+                 from C:/devel/boost_1_55_0/boost/date_time/time_clock.hpp:17,
+                 from C:/devel/boost_1_55_0/boost/thread/thread_time.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/basic_timed_mutex.hpp:16,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/mutex.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/mutex.hpp:14,
+                 from src/allocators.h:9,
+                 from src/serialize.h:22,
+                 from src/core.h:9,
+                 from src/main.h:8,
+                 from src/main.cpp:6:
+C:/devel/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:459:22: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+                      ^~~~~~~~
+In file included from C:/msys64/mingw32/include/c++/7.3.0/memory:80:0,
+                 from C:/devel/boost_1_55_0/boost/config/no_tr1/memory.hpp:21,
+                 from C:/devel/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:27,
+                 from C:/devel/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from C:/devel/boost_1_55_0/boost/date_time/time_clock.hpp:17,
+                 from C:/devel/boost_1_55_0/boost/thread/thread_time.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/basic_timed_mutex.hpp:16,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/mutex.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/mutex.hpp:14,
+                 from src/allocators.h:9,
+                 from src/serialize.h:22,
+                 from src/core.h:9,
+                 from src/main.h:8,
+                 from src/main.cpp:6:
+C:/msys64/mingw32/include/c++/7.3.0/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from C:/devel/boost_1_55_0/boost/shared_ptr.hpp:17:0,
+                 from C:/devel/boost_1_55_0/boost/date_time/time_clock.hpp:17,
+                 from C:/devel/boost_1_55_0/boost/thread/thread_time.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/basic_timed_mutex.hpp:16,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/mutex.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/mutex.hpp:14,
+                 from src/allocators.h:9,
+                 from src/serialize.h:22,
+                 from src/core.h:9,
+                 from src/main.h:8,
+                 from src/main.cpp:6:
+C:/devel/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:525:34: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     shared_ptr & operator=( std::auto_ptr<Y> & r )
+                                  ^~~~~~~~
+In file included from C:/msys64/mingw32/include/c++/7.3.0/memory:80:0,
+                 from C:/devel/boost_1_55_0/boost/config/no_tr1/memory.hpp:21,
+                 from C:/devel/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:27,
+                 from C:/devel/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from C:/devel/boost_1_55_0/boost/date_time/time_clock.hpp:17,
+                 from C:/devel/boost_1_55_0/boost/thread/thread_time.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/basic_timed_mutex.hpp:16,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/mutex.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/mutex.hpp:14,
+                 from src/allocators.h:9,
+                 from src/serialize.h:22,
+                 from src/core.h:9,
+                 from src/main.h:8,
+                 from src/main.cpp:6:
+C:/msys64/mingw32/include/c++/7.3.0/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from C:/devel/boost_1_55_0/boost/shared_ptr.hpp:17:0,
+                 from C:/devel/boost_1_55_0/boost/date_time/time_clock.hpp:17,
+                 from C:/devel/boost_1_55_0/boost/thread/thread_time.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/basic_timed_mutex.hpp:16,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/mutex.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/mutex.hpp:14,
+                 from src/allocators.h:9,
+                 from src/serialize.h:22,
+                 from src/core.h:9,
+                 from src/main.h:8,
+                 from src/main.cpp:6:
+C:/devel/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:534:34: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     shared_ptr & operator=( std::auto_ptr<Y> && r )
+                                  ^~~~~~~~
+In file included from C:/msys64/mingw32/include/c++/7.3.0/memory:80:0,
+                 from C:/devel/boost_1_55_0/boost/config/no_tr1/memory.hpp:21,
+                 from C:/devel/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:27,
+                 from C:/devel/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from C:/devel/boost_1_55_0/boost/date_time/time_clock.hpp:17,
+                 from C:/devel/boost_1_55_0/boost/thread/thread_time.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/basic_timed_mutex.hpp:16,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/mutex.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/mutex.hpp:14,
+                 from src/allocators.h:9,
+                 from src/serialize.h:22,
+                 from src/core.h:9,
+                 from src/main.h:8,
+                 from src/main.cpp:6:
+C:/msys64/mingw32/include/c++/7.3.0/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from C:/devel/boost_1_55_0/boost/shared_ptr.hpp:17:0,
+                 from C:/devel/boost_1_55_0/boost/date_time/time_clock.hpp:17,
+                 from C:/devel/boost_1_55_0/boost/thread/thread_time.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/basic_timed_mutex.hpp:16,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/mutex.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/mutex.hpp:14,
+                 from src/allocators.h:9,
+                 from src/serialize.h:22,
+                 from src/core.h:9,
+                 from src/main.h:8,
+                 from src/main.cpp:6:
+C:/devel/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+C:/devel/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:536:38: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+                                      ^~~~~~~~
+In file included from C:/msys64/mingw32/include/c++/7.3.0/memory:80:0,
+                 from C:/devel/boost_1_55_0/boost/config/no_tr1/memory.hpp:21,
+                 from C:/devel/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:27,
+                 from C:/devel/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from C:/devel/boost_1_55_0/boost/date_time/time_clock.hpp:17,
+                 from C:/devel/boost_1_55_0/boost/thread/thread_time.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/basic_timed_mutex.hpp:16,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/mutex.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/mutex.hpp:14,
+                 from src/allocators.h:9,
+                 from src/serialize.h:22,
+                 from src/core.h:9,
+                 from src/main.h:8,
+                 from src/main.cpp:6:
+C:/msys64/mingw32/include/c++/7.3.0/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from C:/devel/boost_1_55_0/boost/bind/mem_fn.hpp:25:0,
+                 from C:/devel/boost_1_55_0/boost/mem_fn.hpp:22,
+                 from C:/devel/boost_1_55_0/boost/bind/bind.hpp:26,
+                 from C:/devel/boost_1_55_0/boost/bind.hpp:22,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/once.hpp:25,
+                 from C:/devel/boost_1_55_0/boost/thread/once.hpp:15,
+                 from src/allocators.h:10,
+                 from src/serialize.h:22,
+                 from src/core.h:9,
+                 from src/main.h:8,
+                 from src/main.cpp:6:
+C:/devel/boost_1_55_0/boost/get_pointer.hpp: At global scope:
+C:/devel/boost_1_55_0/boost/get_pointer.hpp:27:40: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+ template<class T> T * get_pointer(std::auto_ptr<T> const& p)
+                                        ^~~~~~~~
+In file included from C:/msys64/mingw32/include/c++/7.3.0/memory:80:0,
+                 from C:/devel/boost_1_55_0/boost/config/no_tr1/memory.hpp:21,
+                 from C:/devel/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:27,
+                 from C:/devel/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from C:/devel/boost_1_55_0/boost/date_time/time_clock.hpp:17,
+                 from C:/devel/boost_1_55_0/boost/thread/thread_time.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/basic_timed_mutex.hpp:16,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/mutex.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/mutex.hpp:14,
+                 from src/allocators.h:9,
+                 from src/serialize.h:22,
+                 from src/core.h:9,
+                 from src/main.h:8,
+                 from src/main.cpp:6:
+C:/msys64/mingw32/include/c++/7.3.0/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from C:/devel/boost_1_55_0/boost/scoped_ptr.hpp:14:0,
+                 from C:/devel/boost_1_55_0/boost/signals2/detail/foreign_ptr.hpp:17,
+                 from C:/devel/boost_1_55_0/boost/signals2/slot_base.hpp:17,
+                 from C:/devel/boost_1_55_0/boost/signals2/detail/tracked_objects_visitor.hpp:18,
+                 from C:/devel/boost_1_55_0/boost/signals2/slot.hpp:22,
+                 from C:/devel/boost_1_55_0/boost/signals2/connection.hpp:23,
+                 from C:/devel/boost_1_55_0/boost/signals2/signal.hpp:21,
+                 from src/keystore.h:11,
+                 from src/script.h:17,
+                 from src/core.h:10,
+                 from src/main.h:8,
+                 from src/main.cpp:6:
+C:/devel/boost_1_55_0/boost/smart_ptr/scoped_ptr.hpp:68:31: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit scoped_ptr( std::auto_ptr<T> p ) BOOST_NOEXCEPT : px( p.release() )
+                               ^~~~~~~~
+In file included from C:/msys64/mingw32/include/c++/7.3.0/memory:80:0,
+                 from C:/devel/boost_1_55_0/boost/config/no_tr1/memory.hpp:21,
+                 from C:/devel/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:27,
+                 from C:/devel/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from C:/devel/boost_1_55_0/boost/date_time/time_clock.hpp:17,
+                 from C:/devel/boost_1_55_0/boost/thread/thread_time.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/basic_timed_mutex.hpp:16,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/mutex.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/mutex.hpp:14,
+                 from src/allocators.h:9,
+                 from src/serialize.h:22,
+                 from src/core.h:9,
+                 from src/main.h:8,
+                 from src/main.cpp:6:
+C:/msys64/mingw32/include/c++/7.3.0/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from C:/devel/boost_1_55_0/boost/thread/thread.hpp:13:0,
+                 from C:/devel/boost_1_55_0/boost/thread.hpp:13,
+                 from src/util.h:24,
+                 from src/script.h:19,
+                 from src/core.h:10,
+                 from src/main.h:8,
+                 from src/main.cpp:6:
+C:/devel/boost_1_55_0/boost/thread/detail/thread_group.hpp: In member function 'boost::thread* boost::thread_group::create_thread(F)':
+C:/devel/boost_1_55_0/boost/thread/detail/thread_group.hpp:78:18: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+             std::auto_ptr<thread> new_thread(new thread(threadfunc));
+                  ^~~~~~~~
+In file included from C:/msys64/mingw32/include/c++/7.3.0/memory:80:0,
+                 from C:/devel/boost_1_55_0/boost/config/no_tr1/memory.hpp:21,
+                 from C:/devel/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:27,
+                 from C:/devel/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from C:/devel/boost_1_55_0/boost/date_time/time_clock.hpp:17,
+                 from C:/devel/boost_1_55_0/boost/thread/thread_time.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/basic_timed_mutex.hpp:16,
+                 from C:/devel/boost_1_55_0/boost/thread/win32/mutex.hpp:9,
+                 from C:/devel/boost_1_55_0/boost/thread/mutex.hpp:14,
+                 from src/allocators.h:9,
+                 from src/serialize.h:22,
+                 from src/core.h:9,
+                 from src/main.h:8,
+                 from src/main.cpp:6:
+C:/msys64/mingw32/include/c++/7.3.0/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+src/main.cpp: At global scope:
+src/main.cpp:53:22: error: conflicting declaration 'const int64_t nTargetSpacing'
+ static const int64_t nTargetSpacing = 3 * 60; // 3 min per Block
+                      ^~~~~~~~~~~~~~
+In file included from src/main.cpp:6:0:
+src/main.h:83:21: note: previous declaration as 'unsigned int nTargetSpacing'
+ extern unsigned int nTargetSpacing;
+                     ^~~~~~~~~~~~~~
+In file included from C:/devel/boost_1_55_0/boost/function/detail/maybe_include.hpp:28:0,
+                 from C:/devel/boost_1_55_0/boost/function/detail/function_iterate.hpp:14,
+                 from C:/devel/boost_1_55_0/boost/preprocessor/iteration/detail/iter/forward1.hpp:62,
+                 from C:/devel/boost_1_55_0/boost/function.hpp:64,
+                 from C:/devel/boost_1_55_0/boost/signals2/signal.hpp:18,
+                 from src/keystore.h:11,
+                 from src/script.h:17,
+                 from src/core.h:10,
+                 from src/main.h:8,
+                 from src/main.cpp:6:
+C:/devel/boost_1_55_0/boost/function/function_template.hpp: In instantiation of 'void boost::detail::function::basic_vtable3<R, T0, T1, T2>::assign_functor(FunctionObj, boost::detail::function::function_buffer&, mpl_::true_) const [with FunctionObj = boost::_bi::bind_t<void, boost::_mfi::mf3<void, CWalletInterface, const CTransaction&, const CBlock*, bool>, boost::_bi::list4<boost::_bi::value<CWalletInterface*>, boost::arg<1>, boost::arg<2>, boost::arg<3> > >; R = void; T0 = const CTransaction&; T1 = const CBlock*; T2 = bool; mpl_::true_ = mpl_::bool_<true>]':
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:602:27:   required from 'bool boost::detail::function::basic_vtable3<R, T0, T1, T2>::assign_to(FunctionObj, boost::detail::function::function_buffer&, boost::detail::function::function_obj_tag) const [with FunctionObj = boost::_bi::bind_t<void, boost::_mfi::mf3<void, CWalletInterface, const CTransaction&, const CBlock*, bool>, boost::_bi::list4<boost::_bi::value<CWalletInterface*>, boost::arg<1>, boost::arg<2>, boost::arg<3> > >; R = void; T0 = const CTransaction&; T1 = const CBlock*; T2 = bool]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:492:27:   required from 'bool boost::detail::function::basic_vtable3<R, T0, T1, T2>::assign_to(F, boost::detail::function::function_buffer&) const [with F = boost::_bi::bind_t<void, boost::_mfi::mf3<void, CWalletInterface, const CTransaction&, const CBlock*, bool>, boost::_bi::list4<boost::_bi::value<CWalletInterface*>, boost::arg<1>, boost::arg<2>, boost::arg<3> > >; R = void; T0 = const CTransaction&; T1 = const CBlock*; T2 = bool]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:936:7:   required from 'void boost::function3<R, T1, T2, T3>::assign_to(Functor) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf3<void, CWalletInterface, const CTransaction&, const CBlock*, bool>, boost::_bi::list4<boost::_bi::value<CWalletInterface*>, boost::arg<1>, boost::arg<2>, boost::arg<3> > >; R = void; T0 = const CTransaction&; T1 = const CBlock*; T2 = bool]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:722:7:   required from 'boost::function3<R, T1, T2, T3>::function3(Functor, typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf3<void, CWalletInterface, const CTransaction&, const CBlock*, bool>, boost::_bi::list4<boost::_bi::value<CWalletInterface*>, boost::arg<1>, boost::arg<2>, boost::arg<3> > >; R = void; T0 = const CTransaction&; T1 = const CBlock*; T2 = bool; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type = int]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:1069:16:   required from 'boost::function<R(T0, T1, T2)>::function(Functor, typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf3<void, CWalletInterface, const CTransaction&, const CBlock*, bool>, boost::_bi::list4<boost::_bi::value<CWalletInterface*>, boost::arg<1>, boost::arg<2>, boost::arg<3> > >; R = void; T0 = const CTransaction&; T1 = const CBlock*; T2 = bool; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type = int]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:1124:5:   required from 'typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, boost::function<R(T0, T1, T2)>&>::type boost::function<R(T0, T1, T2)>::operator=(Functor) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf3<void, CWalletInterface, const CTransaction&, const CBlock*, bool>, boost::_bi::list4<boost::_bi::value<CWalletInterface*>, boost::arg<1>, boost::arg<2>, boost::arg<3> > >; R = void; T0 = const CTransaction&; T1 = const CBlock*; T2 = bool; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, boost::function<R(T0, T1, T2)>&>::type = boost::function<void(const CTransaction&, const CBlock*, bool)>&]'
+C:/devel/boost_1_55_0/boost/signals2/detail/slot_template.hpp:156:24:   required from 'void boost::signals2::slot<R(Args ...), SlotFunction>::init_slot_function(const F&) [with F = boost::_bi::bind_t<void, boost::_mfi::mf3<void, CWalletInterface, const CTransaction&, const CBlock*, bool>, boost::_bi::list4<boost::_bi::value<CWalletInterface*>, boost::arg<1>, boost::arg<2>, boost::arg<3> > >; SlotFunction = boost::function<void(const CTransaction&, const CBlock*, bool)>; R = void; Args = {const CTransaction&, const CBlock*, bool}]'
+C:/devel/boost_1_55_0/boost/signals2/detail/slot_template.hpp:81:27:   required from 'boost::signals2::slot<R(Args ...), SlotFunction>::slot(const F&) [with F = boost::_bi::bind_t<void, boost::_mfi::mf3<void, CWalletInterface, const CTransaction&, const CBlock*, bool>, boost::_bi::list4<boost::_bi::value<CWalletInterface*>, boost::arg<1>, boost::arg<2>, boost::arg<3> > >; SlotFunction = boost::function<void(const CTransaction&, const CBlock*, bool)>; R = void; Args = {const CTransaction&, const CBlock*, bool}]'
+src/main.cpp:116:109:   required from here
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:566:11: warning: placement new constructing an object of type 'boost::_bi::bind_t<void, boost::_mfi::mf3<void, CWalletInterface, const CTransaction&, const CBlock*, bool>, boost::_bi::list4<boost::_bi::value<CWalletInterface*>, boost::arg<1>, boost::arg<2>, boost::arg<3> > >' and size '12' in a region of type 'char' and size '1' [-Wplacement-new=]
+           new (reinterpret_cast<void*>(&functor.data)) FunctionObj(f);
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from C:/devel/boost_1_55_0/boost/function/detail/maybe_include.hpp:18:0,
+                 from C:/devel/boost_1_55_0/boost/function/detail/function_iterate.hpp:14,
+                 from C:/devel/boost_1_55_0/boost/preprocessor/iteration/detail/iter/forward1.hpp:52,
+                 from C:/devel/boost_1_55_0/boost/function.hpp:64,
+                 from C:/devel/boost_1_55_0/boost/signals2/signal.hpp:18,
+                 from src/keystore.h:11,
+                 from src/script.h:17,
+                 from src/core.h:10,
+                 from src/main.h:8,
+                 from src/main.cpp:6:
+C:/devel/boost_1_55_0/boost/function/function_template.hpp: In instantiation of 'void boost::detail::function::basic_vtable1<R, T0>::assign_functor(FunctionObj, boost::detail::function::function_buffer&, mpl_::true_) const [with FunctionObj = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const uint256&; mpl_::true_ = mpl_::bool_<true>]':
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:602:27:   required from 'bool boost::detail::function::basic_vtable1<R, T0>::assign_to(FunctionObj, boost::detail::function::function_buffer&, boost::detail::function::function_obj_tag) const [with FunctionObj = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const uint256&]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:492:27:   required from 'bool boost::detail::function::basic_vtable1<R, T0>::assign_to(F, boost::detail::function::function_buffer&) const [with F = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const uint256&]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:936:7:   required from 'void boost::function1<R, T1>::assign_to(Functor) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const uint256&]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:722:7:   required from 'boost::function1<R, T1>::function1(Functor, typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const uint256&; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type = int]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:1069:16:   required from 'boost::function<R(T0)>::function(Functor, typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const uint256&; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type = int]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:1124:5:   required from 'typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, boost::function<R(T0)>&>::type boost::function<R(T0)>::operator=(Functor) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const uint256&; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, boost::function<R(T0)>&>::type = boost::function<void(const uint256&)>&]'
+C:/devel/boost_1_55_0/boost/signals2/detail/slot_template.hpp:156:24:   required from 'void boost::signals2::slot<R(Args ...), SlotFunction>::init_slot_function(const F&) [with F = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; SlotFunction = boost::function<void(const uint256&)>; R = void; Args = {const uint256&}]'
+C:/devel/boost_1_55_0/boost/signals2/detail/slot_template.hpp:81:27:   required from 'boost::signals2::slot<R(Args ...), SlotFunction>::slot(const F&) [with F = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; SlotFunction = boost::function<void(const uint256&)>; R = void; Args = {const uint256&}]'
+src/main.cpp:117:102:   required from here
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:566:11: warning: placement new constructing an object of type 'boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >' and size '12' in a region of type 'char' and size '1' [-Wplacement-new=]
+           new (reinterpret_cast<void*>(&functor.data)) FunctionObj(f);
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/devel/boost_1_55_0/boost/function/function_template.hpp: In instantiation of 'void boost::detail::function::basic_vtable1<R, T0>::assign_functor(FunctionObj, boost::detail::function::function_buffer&, mpl_::true_) const [with FunctionObj = boost::_bi::bind_t<bool, boost::_mfi::mf1<bool, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const uint256&; mpl_::true_ = mpl_::bool_<true>]':
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:602:27:   required from 'bool boost::detail::function::basic_vtable1<R, T0>::assign_to(FunctionObj, boost::detail::function::function_buffer&, boost::detail::function::function_obj_tag) const [with FunctionObj = boost::_bi::bind_t<bool, boost::_mfi::mf1<bool, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const uint256&]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:492:27:   required from 'bool boost::detail::function::basic_vtable1<R, T0>::assign_to(F, boost::detail::function::function_buffer&) const [with F = boost::_bi::bind_t<bool, boost::_mfi::mf1<bool, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const uint256&]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:936:7:   required from 'void boost::function1<R, T1>::assign_to(Functor) [with Functor = boost::_bi::bind_t<bool, boost::_mfi::mf1<bool, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const uint256&]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:722:7:   required from 'boost::function1<R, T1>::function1(Functor, typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type) [with Functor = boost::_bi::bind_t<bool, boost::_mfi::mf1<bool, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const uint256&; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type = int]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:1069:16:   required from 'boost::function<R(T0)>::function(Functor, typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type) [with Functor = boost::_bi::bind_t<bool, boost::_mfi::mf1<bool, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const uint256&; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type = int]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:1124:5:   required from 'typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, boost::function<R(T0)>&>::type boost::function<R(T0)>::operator=(Functor) [with Functor = boost::_bi::bind_t<bool, boost::_mfi::mf1<bool, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const uint256&; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, boost::function<R(T0)>&>::type = boost::function<void(const uint256&)>&]'
+C:/devel/boost_1_55_0/boost/signals2/detail/slot_template.hpp:156:24:   required from 'void boost::signals2::slot<R(Args ...), SlotFunction>::init_slot_function(const F&) [with F = boost::_bi::bind_t<bool, boost::_mfi::mf1<bool, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; SlotFunction = boost::function<void(const uint256&)>; R = void; Args = {const uint256&}]'
+C:/devel/boost_1_55_0/boost/signals2/detail/slot_template.hpp:81:27:   required from 'boost::signals2::slot<R(Args ...), SlotFunction>::slot(const F&) [with F = boost::_bi::bind_t<bool, boost::_mfi::mf1<bool, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; SlotFunction = boost::function<void(const uint256&)>; R = void; Args = {const uint256&}]'
+src/main.cpp:118:107:   required from here
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:566:11: warning: placement new constructing an object of type 'boost::_bi::bind_t<bool, boost::_mfi::mf1<bool, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >' and size '12' in a region of type 'char' and size '1' [-Wplacement-new=]
+C:/devel/boost_1_55_0/boost/function/function_template.hpp: In instantiation of 'void boost::detail::function::basic_vtable1<R, T0>::assign_functor(FunctionObj, boost::detail::function::function_buffer&, mpl_::true_) const [with FunctionObj = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const CBlockLocator&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const CBlockLocator&; mpl_::true_ = mpl_::bool_<true>]':
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:602:27:   required from 'bool boost::detail::function::basic_vtable1<R, T0>::assign_to(FunctionObj, boost::detail::function::function_buffer&, boost::detail::function::function_obj_tag) const [with FunctionObj = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const CBlockLocator&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const CBlockLocator&]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:492:27:   required from 'bool boost::detail::function::basic_vtable1<R, T0>::assign_to(F, boost::detail::function::function_buffer&) const [with F = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const CBlockLocator&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const CBlockLocator&]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:936:7:   required from 'void boost::function1<R, T1>::assign_to(Functor) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const CBlockLocator&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const CBlockLocator&]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:722:7:   required from 'boost::function1<R, T1>::function1(Functor, typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const CBlockLocator&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const CBlockLocator&; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type = int]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:1069:16:   required from 'boost::function<R(T0)>::function(Functor, typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const CBlockLocator&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const CBlockLocator&; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type = int]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:1124:5:   required from 'typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, boost::function<R(T0)>&>::type boost::function<R(T0)>::operator=(Functor) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const CBlockLocator&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const CBlockLocator&; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, boost::function<R(T0)>&>::type = boost::function<void(const CBlockLocator&)>&]'
+C:/devel/boost_1_55_0/boost/signals2/detail/slot_template.hpp:156:24:   required from 'void boost::signals2::slot<R(Args ...), SlotFunction>::init_slot_function(const F&) [with F = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const CBlockLocator&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; SlotFunction = boost::function<void(const CBlockLocator&)>; R = void; Args = {const CBlockLocator&}]'
+C:/devel/boost_1_55_0/boost/signals2/detail/slot_template.hpp:81:27:   required from 'boost::signals2::slot<R(Args ...), SlotFunction>::slot(const F&) [with F = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const CBlockLocator&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; SlotFunction = boost::function<void(const CBlockLocator&)>; R = void; Args = {const CBlockLocator&}]'
+src/main.cpp:119:95:   required from here
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:566:11: warning: placement new constructing an object of type 'boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const CBlockLocator&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >' and size '12' in a region of type 'char' and size '1' [-Wplacement-new=]
+C:/devel/boost_1_55_0/boost/function/function_template.hpp: In instantiation of 'void boost::detail::function::basic_vtable1<R, T0>::assign_functor(FunctionObj, boost::detail::function::function_buffer&, mpl_::true_) const [with FunctionObj = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, bool>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = bool; mpl_::true_ = mpl_::bool_<true>]':
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:602:27:   required from 'bool boost::detail::function::basic_vtable1<R, T0>::assign_to(FunctionObj, boost::detail::function::function_buffer&, boost::detail::function::function_obj_tag) const [with FunctionObj = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, bool>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = bool]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:492:27:   required from 'bool boost::detail::function::basic_vtable1<R, T0>::assign_to(F, boost::detail::function::function_buffer&) const [with F = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, bool>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = bool]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:936:7:   required from 'void boost::function1<R, T1>::assign_to(Functor) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, bool>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = bool]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:722:7:   required from 'boost::function1<R, T1>::function1(Functor, typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, bool>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = bool; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type = int]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:1069:16:   required from 'boost::function<R(T0)>::function(Functor, typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, bool>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = bool; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type = int]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:1124:5:   required from 'typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, boost::function<R(T0)>&>::type boost::function<R(T0)>::operator=(Functor) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, bool>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = bool; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, boost::function<R(T0)>&>::type = boost::function<void(bool)>&]'
+C:/devel/boost_1_55_0/boost/signals2/detail/slot_template.hpp:156:24:   required from 'void boost::signals2::slot<R(Args ...), SlotFunction>::init_slot_function(const F&) [with F = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, bool>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; SlotFunction = boost::function<void(bool)>; R = void; Args = {bool}]'
+C:/devel/boost_1_55_0/boost/signals2/detail/slot_template.hpp:81:27:   required from 'boost::signals2::slot<R(Args ...), SlotFunction>::slot(const F&) [with F = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, bool>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; SlotFunction = boost::function<void(bool)>; R = void; Args = {bool}]'
+src/main.cpp:121:104:   required from here
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:566:11: warning: placement new constructing an object of type 'boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, bool>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >' and size '12' in a region of type 'char' and size '1' [-Wplacement-new=]
+In file included from C:/devel/boost_1_55_0/boost/function/detail/prologue.hpp:17:0,
+                 from C:/devel/boost_1_55_0/boost/function.hpp:24,
+                 from C:/devel/boost_1_55_0/boost/signals2/signal.hpp:18,
+                 from src/keystore.h:11,
+                 from src/script.h:17,
+                 from src/core.h:10,
+                 from src/main.h:8,
+                 from src/main.cpp:6:
+C:/devel/boost_1_55_0/boost/function/function_base.hpp: In instantiation of 'static void boost::detail::function::functor_manager_common<Functor>::manage_small(const boost::detail::function::function_buffer&, boost::detail::function::function_buffer&, boost::detail::function::functor_manager_operation_type) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf3<void, CWalletInterface, const CTransaction&, const CBlock*, bool>, boost::_bi::list4<boost::_bi::value<CWalletInterface*>, boost::arg<1>, boost::arg<2>, boost::arg<3> > >]':
+C:/devel/boost_1_55_0/boost/function/function_base.hpp:364:56:   required from 'static void boost::detail::function::functor_manager<Functor>::manager(const boost::detail::function::function_buffer&, boost::detail::function::function_buffer&, boost::detail::function::functor_manager_operation_type, mpl_::true_) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf3<void, CWalletInterface, const CTransaction&, const CBlock*, bool>, boost::_bi::list4<boost::_bi::value<CWalletInterface*>, boost::arg<1>, boost::arg<2>, boost::arg<3> > >; mpl_::true_ = mpl_::bool_<true>]'
+C:/devel/boost_1_55_0/boost/function/function_base.hpp:412:18:   required from 'static void boost::detail::function::functor_manager<Functor>::manager(const boost::detail::function::function_buffer&, boost::detail::function::function_buffer&, boost::detail::function::functor_manager_operation_type, boost::detail::function::function_obj_tag) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf3<void, CWalletInterface, const CTransaction&, const CBlock*, bool>, boost::_bi::list4<boost::_bi::value<CWalletInterface*>, boost::arg<1>, boost::arg<2>, boost::arg<3> > >]'
+C:/devel/boost_1_55_0/boost/function/function_base.hpp:440:20:   required from 'static void boost::detail::function::functor_manager<Functor>::manage(const boost::detail::function::function_buffer&, boost::detail::function::function_buffer&, boost::detail::function::functor_manager_operation_type) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf3<void, CWalletInterface, const CTransaction&, const CBlock*, bool>, boost::_bi::list4<boost::_bi::value<CWalletInterface*>, boost::arg<1>, boost::arg<2>, boost::arg<3> > >]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:934:13:   required from 'void boost::function3<R, T1, T2, T3>::assign_to(Functor) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf3<void, CWalletInterface, const CTransaction&, const CBlock*, bool>, boost::_bi::list4<boost::_bi::value<CWalletInterface*>, boost::arg<1>, boost::arg<2>, boost::arg<3> > >; R = void; T0 = const CTransaction&; T1 = const CBlock*; T2 = bool]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:722:7:   required from 'boost::function3<R, T1, T2, T3>::function3(Functor, typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf3<void, CWalletInterface, const CTransaction&, const CBlock*, bool>, boost::_bi::list4<boost::_bi::value<CWalletInterface*>, boost::arg<1>, boost::arg<2>, boost::arg<3> > >; R = void; T0 = const CTransaction&; T1 = const CBlock*; T2 = bool; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type = int]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:1069:16:   required from 'boost::function<R(T0, T1, T2)>::function(Functor, typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf3<void, CWalletInterface, const CTransaction&, const CBlock*, bool>, boost::_bi::list4<boost::_bi::value<CWalletInterface*>, boost::arg<1>, boost::arg<2>, boost::arg<3> > >; R = void; T0 = const CTransaction&; T1 = const CBlock*; T2 = bool; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type = int]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:1124:5:   required from 'typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, boost::function<R(T0, T1, T2)>&>::type boost::function<R(T0, T1, T2)>::operator=(Functor) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf3<void, CWalletInterface, const CTransaction&, const CBlock*, bool>, boost::_bi::list4<boost::_bi::value<CWalletInterface*>, boost::arg<1>, boost::arg<2>, boost::arg<3> > >; R = void; T0 = const CTransaction&; T1 = const CBlock*; T2 = bool; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, boost::function<R(T0, T1, T2)>&>::type = boost::function<void(const CTransaction&, const CBlock*, bool)>&]'
+C:/devel/boost_1_55_0/boost/signals2/detail/slot_template.hpp:156:24:   required from 'void boost::signals2::slot<R(Args ...), SlotFunction>::init_slot_function(const F&) [with F = boost::_bi::bind_t<void, boost::_mfi::mf3<void, CWalletInterface, const CTransaction&, const CBlock*, bool>, boost::_bi::list4<boost::_bi::value<CWalletInterface*>, boost::arg<1>, boost::arg<2>, boost::arg<3> > >; SlotFunction = boost::function<void(const CTransaction&, const CBlock*, bool)>; R = void; Args = {const CTransaction&, const CBlock*, bool}]'
+C:/devel/boost_1_55_0/boost/signals2/detail/slot_template.hpp:81:27:   required from 'boost::signals2::slot<R(Args ...), SlotFunction>::slot(const F&) [with F = boost::_bi::bind_t<void, boost::_mfi::mf3<void, CWalletInterface, const CTransaction&, const CBlock*, bool>, boost::_bi::list4<boost::_bi::value<CWalletInterface*>, boost::arg<1>, boost::arg<2>, boost::arg<3> > >; SlotFunction = boost::function<void(const CTransaction&, const CBlock*, bool)>; R = void; Args = {const CTransaction&, const CBlock*, bool}]'
+src/main.cpp:116:109:   required from here
+C:/devel/boost_1_55_0/boost/function/function_base.hpp:318:13: warning: placement new constructing an object of type 'boost::detail::function::functor_manager_common<boost::_bi::bind_t<void, boost::_mfi::mf3<void, CWalletInterface, const CTransaction&, const CBlock*, bool>, boost::_bi::list4<boost::_bi::value<CWalletInterface*>, boost::arg<1>, boost::arg<2>, boost::arg<3> > > >::functor_type {aka boost::_bi::bind_t<void, boost::_mfi::mf3<void, CWalletInterface, const CTransaction&, const CBlock*, bool>, boost::_bi::list4<boost::_bi::value<CWalletInterface*>, boost::arg<1>, boost::arg<2>, boost::arg<3> > >}' and size '12' in a region of type 'char' and size '1' [-Wplacement-new=]
+             new (reinterpret_cast<void*>(&out_buffer.data)) functor_type(*in_functor);
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/devel/boost_1_55_0/boost/function/function_base.hpp: In instantiation of 'static void boost::detail::function::functor_manager_common<Functor>::manage_small(const boost::detail::function::function_buffer&, boost::detail::function::function_buffer&, boost::detail::function::functor_manager_operation_type) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >]':
+C:/devel/boost_1_55_0/boost/function/function_base.hpp:364:56:   required from 'static void boost::detail::function::functor_manager<Functor>::manager(const boost::detail::function::function_buffer&, boost::detail::function::function_buffer&, boost::detail::function::functor_manager_operation_type, mpl_::true_) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; mpl_::true_ = mpl_::bool_<true>]'
+C:/devel/boost_1_55_0/boost/function/function_base.hpp:412:18:   required from 'static void boost::detail::function::functor_manager<Functor>::manager(const boost::detail::function::function_buffer&, boost::detail::function::function_buffer&, boost::detail::function::functor_manager_operation_type, boost::detail::function::function_obj_tag) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >]'
+C:/devel/boost_1_55_0/boost/function/function_base.hpp:440:20:   required from 'static void boost::detail::function::functor_manager<Functor>::manage(const boost::detail::function::function_buffer&, boost::detail::function::function_buffer&, boost::detail::function::functor_manager_operation_type) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:934:13:   required from 'void boost::function1<R, T1>::assign_to(Functor) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const uint256&]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:722:7:   required from 'boost::function1<R, T1>::function1(Functor, typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const uint256&; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type = int]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:1069:16:   required from 'boost::function<R(T0)>::function(Functor, typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const uint256&; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type = int]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:1124:5:   required from 'typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, boost::function<R(T0)>&>::type boost::function<R(T0)>::operator=(Functor) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const uint256&; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, boost::function<R(T0)>&>::type = boost::function<void(const uint256&)>&]'
+C:/devel/boost_1_55_0/boost/signals2/detail/slot_template.hpp:156:24:   required from 'void boost::signals2::slot<R(Args ...), SlotFunction>::init_slot_function(const F&) [with F = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; SlotFunction = boost::function<void(const uint256&)>; R = void; Args = {const uint256&}]'
+C:/devel/boost_1_55_0/boost/signals2/detail/slot_template.hpp:81:27:   required from 'boost::signals2::slot<R(Args ...), SlotFunction>::slot(const F&) [with F = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; SlotFunction = boost::function<void(const uint256&)>; R = void; Args = {const uint256&}]'
+src/main.cpp:117:102:   required from here
+C:/devel/boost_1_55_0/boost/function/function_base.hpp:318:13: warning: placement new constructing an object of type 'boost::detail::function::functor_manager_common<boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > > >::functor_type {aka boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >}' and size '12' in a region of type 'char' and size '1' [-Wplacement-new=]
+C:/devel/boost_1_55_0/boost/function/function_base.hpp: In instantiation of 'static void boost::detail::function::functor_manager_common<Functor>::manage_small(const boost::detail::function::function_buffer&, boost::detail::function::function_buffer&, boost::detail::function::functor_manager_operation_type) [with Functor = boost::_bi::bind_t<bool, boost::_mfi::mf1<bool, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >]':
+C:/devel/boost_1_55_0/boost/function/function_base.hpp:364:56:   required from 'static void boost::detail::function::functor_manager<Functor>::manager(const boost::detail::function::function_buffer&, boost::detail::function::function_buffer&, boost::detail::function::functor_manager_operation_type, mpl_::true_) [with Functor = boost::_bi::bind_t<bool, boost::_mfi::mf1<bool, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; mpl_::true_ = mpl_::bool_<true>]'
+C:/devel/boost_1_55_0/boost/function/function_base.hpp:412:18:   required from 'static void boost::detail::function::functor_manager<Functor>::manager(const boost::detail::function::function_buffer&, boost::detail::function::function_buffer&, boost::detail::function::functor_manager_operation_type, boost::detail::function::function_obj_tag) [with Functor = boost::_bi::bind_t<bool, boost::_mfi::mf1<bool, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >]'
+C:/devel/boost_1_55_0/boost/function/function_base.hpp:440:20:   required from 'static void boost::detail::function::functor_manager<Functor>::manage(const boost::detail::function::function_buffer&, boost::detail::function::function_buffer&, boost::detail::function::functor_manager_operation_type) [with Functor = boost::_bi::bind_t<bool, boost::_mfi::mf1<bool, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:934:13:   required from 'void boost::function1<R, T1>::assign_to(Functor) [with Functor = boost::_bi::bind_t<bool, boost::_mfi::mf1<bool, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const uint256&]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:722:7:   required from 'boost::function1<R, T1>::function1(Functor, typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type) [with Functor = boost::_bi::bind_t<bool, boost::_mfi::mf1<bool, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const uint256&; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type = int]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:1069:16:   required from 'boost::function<R(T0)>::function(Functor, typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type) [with Functor = boost::_bi::bind_t<bool, boost::_mfi::mf1<bool, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const uint256&; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type = int]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:1124:5:   required from 'typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, boost::function<R(T0)>&>::type boost::function<R(T0)>::operator=(Functor) [with Functor = boost::_bi::bind_t<bool, boost::_mfi::mf1<bool, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const uint256&; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, boost::function<R(T0)>&>::type = boost::function<void(const uint256&)>&]'
+C:/devel/boost_1_55_0/boost/signals2/detail/slot_template.hpp:156:24:   required from 'void boost::signals2::slot<R(Args ...), SlotFunction>::init_slot_function(const F&) [with F = boost::_bi::bind_t<bool, boost::_mfi::mf1<bool, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; SlotFunction = boost::function<void(const uint256&)>; R = void; Args = {const uint256&}]'
+C:/devel/boost_1_55_0/boost/signals2/detail/slot_template.hpp:81:27:   required from 'boost::signals2::slot<R(Args ...), SlotFunction>::slot(const F&) [with F = boost::_bi::bind_t<bool, boost::_mfi::mf1<bool, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; SlotFunction = boost::function<void(const uint256&)>; R = void; Args = {const uint256&}]'
+src/main.cpp:118:107:   required from here
+C:/devel/boost_1_55_0/boost/function/function_base.hpp:318:13: warning: placement new constructing an object of type 'boost::detail::function::functor_manager_common<boost::_bi::bind_t<bool, boost::_mfi::mf1<bool, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > > >::functor_type {aka boost::_bi::bind_t<bool, boost::_mfi::mf1<bool, CWalletInterface, const uint256&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >}' and size '12' in a region of type 'char' and size '1' [-Wplacement-new=]
+C:/devel/boost_1_55_0/boost/function/function_base.hpp: In instantiation of 'static void boost::detail::function::functor_manager_common<Functor>::manage_small(const boost::detail::function::function_buffer&, boost::detail::function::function_buffer&, boost::detail::function::functor_manager_operation_type) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const CBlockLocator&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >]':
+C:/devel/boost_1_55_0/boost/function/function_base.hpp:364:56:   required from 'static void boost::detail::function::functor_manager<Functor>::manager(const boost::detail::function::function_buffer&, boost::detail::function::function_buffer&, boost::detail::function::functor_manager_operation_type, mpl_::true_) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const CBlockLocator&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; mpl_::true_ = mpl_::bool_<true>]'
+C:/devel/boost_1_55_0/boost/function/function_base.hpp:412:18:   required from 'static void boost::detail::function::functor_manager<Functor>::manager(const boost::detail::function::function_buffer&, boost::detail::function::function_buffer&, boost::detail::function::functor_manager_operation_type, boost::detail::function::function_obj_tag) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const CBlockLocator&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >]'
+C:/devel/boost_1_55_0/boost/function/function_base.hpp:440:20:   required from 'static void boost::detail::function::functor_manager<Functor>::manage(const boost::detail::function::function_buffer&, boost::detail::function::function_buffer&, boost::detail::function::functor_manager_operation_type) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const CBlockLocator&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:934:13:   required from 'void boost::function1<R, T1>::assign_to(Functor) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const CBlockLocator&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const CBlockLocator&]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:722:7:   required from 'boost::function1<R, T1>::function1(Functor, typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const CBlockLocator&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const CBlockLocator&; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type = int]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:1069:16:   required from 'boost::function<R(T0)>::function(Functor, typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const CBlockLocator&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const CBlockLocator&; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type = int]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:1124:5:   required from 'typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, boost::function<R(T0)>&>::type boost::function<R(T0)>::operator=(Functor) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const CBlockLocator&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = const CBlockLocator&; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, boost::function<R(T0)>&>::type = boost::function<void(const CBlockLocator&)>&]'
+C:/devel/boost_1_55_0/boost/signals2/detail/slot_template.hpp:156:24:   required from 'void boost::signals2::slot<R(Args ...), SlotFunction>::init_slot_function(const F&) [with F = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const CBlockLocator&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; SlotFunction = boost::function<void(const CBlockLocator&)>; R = void; Args = {const CBlockLocator&}]'
+C:/devel/boost_1_55_0/boost/signals2/detail/slot_template.hpp:81:27:   required from 'boost::signals2::slot<R(Args ...), SlotFunction>::slot(const F&) [with F = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const CBlockLocator&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; SlotFunction = boost::function<void(const CBlockLocator&)>; R = void; Args = {const CBlockLocator&}]'
+src/main.cpp:119:95:   required from here
+C:/devel/boost_1_55_0/boost/function/function_base.hpp:318:13: warning: placement new constructing an object of type 'boost::detail::function::functor_manager_common<boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const CBlockLocator&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > > >::functor_type {aka boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, const CBlockLocator&>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >}' and size '12' in a region of type 'char' and size '1' [-Wplacement-new=]
+C:/devel/boost_1_55_0/boost/function/function_base.hpp: In instantiation of 'static void boost::detail::function::functor_manager_common<Functor>::manage_small(const boost::detail::function::function_buffer&, boost::detail::function::function_buffer&, boost::detail::function::functor_manager_operation_type) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, bool>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >]':
+C:/devel/boost_1_55_0/boost/function/function_base.hpp:364:56:   required from 'static void boost::detail::function::functor_manager<Functor>::manager(const boost::detail::function::function_buffer&, boost::detail::function::function_buffer&, boost::detail::function::functor_manager_operation_type, mpl_::true_) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, bool>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; mpl_::true_ = mpl_::bool_<true>]'
+C:/devel/boost_1_55_0/boost/function/function_base.hpp:412:18:   required from 'static void boost::detail::function::functor_manager<Functor>::manager(const boost::detail::function::function_buffer&, boost::detail::function::function_buffer&, boost::detail::function::functor_manager_operation_type, boost::detail::function::function_obj_tag) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, bool>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >]'
+C:/devel/boost_1_55_0/boost/function/function_base.hpp:440:20:   required from 'static void boost::detail::function::functor_manager<Functor>::manage(const boost::detail::function::function_buffer&, boost::detail::function::function_buffer&, boost::detail::function::functor_manager_operation_type) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, bool>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:934:13:   required from 'void boost::function1<R, T1>::assign_to(Functor) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, bool>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = bool]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:722:7:   required from 'boost::function1<R, T1>::function1(Functor, typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, bool>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = bool; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type = int]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:1069:16:   required from 'boost::function<R(T0)>::function(Functor, typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, bool>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = bool; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type = int]'
+C:/devel/boost_1_55_0/boost/function/function_template.hpp:1124:5:   required from 'typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, boost::function<R(T0)>&>::type boost::function<R(T0)>::operator=(Functor) [with Functor = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, bool>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; R = void; T0 = bool; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, boost::function<R(T0)>&>::type = boost::function<void(bool)>&]'
+C:/devel/boost_1_55_0/boost/signals2/detail/slot_template.hpp:156:24:   required from 'void boost::signals2::slot<R(Args ...), SlotFunction>::init_slot_function(const F&) [with F = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, bool>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; SlotFunction = boost::function<void(bool)>; R = void; Args = {bool}]'
+C:/devel/boost_1_55_0/boost/signals2/detail/slot_template.hpp:81:27:   required from 'boost::signals2::slot<R(Args ...), SlotFunction>::slot(const F&) [with F = boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, bool>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >; SlotFunction = boost::function<void(bool)>; R = void; Args = {bool}]'
+src/main.cpp:121:104:   required from here
+C:/devel/boost_1_55_0/boost/function/function_base.hpp:318:13: warning: placement new constructing an object of type 'boost::detail::function::functor_manager_common<boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, bool>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > > >::functor_type {aka boost::_bi::bind_t<void, boost::_mfi::mf1<void, CWalletInterface, bool>, boost::_bi::list2<boost::_bi::value<CWalletInterface*>, boost::arg<1> > >}' and size '12' in a region of type 'char' and size '1' [-Wplacement-new=]
+In file included from src/util.h:16:0,
+                 from src/script.h:19,
+                 from src/core.h:10,
+                 from src/main.h:8,
+                 from src/main.cpp:6:
+src/tinyformat.h: In static member function 'static const char* tinyformat::detail::FormatIterator::streamStateFromFormat(std::ostream&, unsigned int&, const char*, int, int)':
+src/tinyformat.h:785:21: warning: this statement may fall through [-Wimplicit-fallthrough=]
+             out.setf(std::ios::uppercase);
+             ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+src/tinyformat.h:786:9: note: here
+         case 'x': case 'p':
+         ^~~~
+src/tinyformat.h:791:21: warning: this statement may fall through [-Wimplicit-fallthrough=]
+             out.setf(std::ios::uppercase);
+             ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+src/tinyformat.h:792:9: note: here
+         case 'e':
+         ^~~~
+src/tinyformat.h:797:21: warning: this statement may fall through [-Wimplicit-fallthrough=]
+             out.setf(std::ios::uppercase);
+             ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+src/tinyformat.h:798:9: note: here
+         case 'f':
+         ^~~~
+src/tinyformat.h:802:21: warning: this statement may fall through [-Wimplicit-fallthrough=]
+             out.setf(std::ios::uppercase);
+             ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+src/tinyformat.h:803:9: note: here
+         case 'g':
+         ^~~~
+make[1]: *** [Makefile.Release:57931: build/main.o] Error 1
+make[1]: Leaving directory '/c/Users/wolfgang/Documents/Privat/Coins/Dev/StyleCoin/stylecoin'
+make: *** [Makefile:34: release] Error 2
