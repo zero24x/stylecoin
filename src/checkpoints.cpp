@@ -10,7 +10,6 @@
 #include "txdb.h"
 #include "main.h"
 #include "uint256.h"
-#include "chainparams.h"
 
 static const int nCheckpointSpan = 5000;
 
@@ -27,7 +26,7 @@ namespace Checkpoints
     //
     static MapCheckpoints mapCheckpoints =
         boost::assign::map_list_of
-        ( 0, uint256("0xc6d474ab9565ec9caec3608009d4b593cd372bc921fa9f6993b073f52b5ec76b") );
+        ( 0, uint256("000059b00a8735812562b81dabdc4928ec1bab3abf3e806a942069656a002284") );
 
     // TestNet has no checkpoints
     static MapCheckpoints mapCheckpointsTestnet;

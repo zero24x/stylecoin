@@ -49,10 +49,9 @@ CBigNum bnProofOfStakeLimit(~uint256(0) >> 20);
 
 unsigned int nStakeMinAge = 1 * 60 * 60; // 1 hour
 unsigned int nModifierInterval = 10 * 60; // time to elapse before new modifier is computed
-unsigned int nTargetTimespan = 48 * 60;  // 48 mins
-unsigned int nTargetSpacing = 3 * 60; // 3 min per Block
+static int64_t nTargetTimespan = 48 * 60;  // 48 mins
 
-int nCoinbaseMaturity = 24;
+int nCoinbaseMaturity = 5;
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
 
@@ -1371,9 +1370,9 @@ int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
 
     int64_t nSubsidy = 0 * COIN;
 
-    if (nHeight+1 <= 1){
+    if (nHeight <= 1){
       nSubsidy = 2640960 * COIN;
-    } else if (nHeight+1 < 43200) {
+    } else if (nHeight <= 43200) {
       nSubsidy = 10 * COIN;
     } else {
       nSubsidy = 5 * COIN;
@@ -1385,7 +1384,27 @@ int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
 // miner's coin stake reward
 int64_t GetProofOfStakeReward(const CBlockIndex* pindexPrev, int64_t nCoinAge, int64_t nFees)
 {
-    return GetProofOfWorkReward(pindexPrev->nHeight, nFees);
+	if (pindexPrev == NULL)
+		return 0;
+
+	int nHeight = pindexPrev->nHeight;
+
+    // Force coin cap - return only fees
+    if (maxSupplyReached()) {
+      return nFees;
+    }
+
+    int64_t nSubsidy = 0 * COIN;
+
+    if (nHeight+1 <= 1){
+      nSubsidy = 2640960 * COIN;
+    } else if (nHeight+1 < 43200) {
+      nSubsidy = 10 * COIN;
+    } else {
+      nSubsidy = 5 * COIN;
+    }
+
+    return nSubsidy + nFees;
 }
 
 // ppcoin: find last block index up to pindex
@@ -1398,6 +1417,8 @@ const CBlockIndex* GetLastBlockIndex(const CBlockIndex* pindex, bool fProofOfSta
 
 unsigned int GetNextTargetRequired(const CBlockIndex* pindexLast, bool fProofOfStake)
 {
+	unsigned int nTargetTemp = TARGET_SPACING;
+
     CBigNum bnTargetLimit = fProofOfStake ? GetProofOfStakeLimit(pindexLast->nHeight) : Params().ProofOfWorkLimit();
 
     if (pindexLast == NULL)
@@ -1413,16 +1434,16 @@ unsigned int GetNextTargetRequired(const CBlockIndex* pindexLast, bool fProofOfS
     int64_t nActualSpacing = pindexPrev->GetBlockTime() - pindexPrevPrev->GetBlockTime();
 
     if (nActualSpacing < 0){
-        nActualSpacing = nTargetSpacing;
+        nActualSpacing = nTargetTemp;
     }
 
     // ppcoin: target change every block
     // ppcoin: retarget with exponential moving toward target spacing
     CBigNum bnNew;
     bnNew.SetCompact(pindexPrev->nBits);
-    int64_t nInterval = nTargetTimespan / nTargetSpacing;
-    bnNew *= ((nInterval - 1) * nTargetSpacing + nActualSpacing + nActualSpacing);
-    bnNew /= ((nInterval + 1) * nTargetSpacing);
+    int64_t nInterval = nTargetTimespan / nTargetTemp;
+    bnNew *= ((nInterval - 1) * nTargetTemp + nActualSpacing + nActualSpacing);
+    bnNew /= ((nInterval + 1) * nTargetTemp);
 
     if (bnNew <= 0 || bnNew > bnTargetLimit)
         bnNew = bnTargetLimit;
@@ -1448,6 +1469,8 @@ bool CheckProofOfWork(uint256 hash, unsigned int nBits)
 
 bool IsInitialBlockDownload()
 {
+	return false;
+
     LOCK(cs_main);
     if (pindexBest == NULL || nBestHeight < Checkpoints::GetTotalBlocksEstimate())
         return true;

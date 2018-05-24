@@ -23,8 +23,7 @@ class CValidationState;
 static const int64_t DARKSEND_COLLATERAL = (50*COIN);
 static const int64_t DARKSEND_POOL_MAX = (4999.99*COIN);
 
-static const int64_t FORK_TIME = 1510059600;  //November 7, 2017 1:00:00 PM GMT
-
+static const int64_t TARGET_SPACING = 3 * 60; // 3 min per Block
 
 #define INSTANTX_SIGNATURES_REQUIRED           10
 #define INSTANTX_SIGNATURES_TOTAL              15
@@ -61,7 +60,7 @@ static const int64_t MIN_TX_FEE = 10000;
 /** Fees smaller than this (in satoshi) are considered zero fee (for relaying) */
 static const int64_t MIN_RELAY_TX_FEE = MIN_TX_FEE;
 /** No amount larger than this (in satoshi) is valid */
-static const int64_t MAX_MONEY = 88032000LL * COIN;
+static const int64_t MAX_MONEY = 88032000 * COIN;
 inline bool MoneyRange(int64_t nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
 /** Threshold for nLockTime: below this value it is interpreted as block number, otherwise as UNIX timestamp. */
 static const unsigned int LOCKTIME_THRESHOLD = 500000000; // Tue Nov  5 00:53:20 1985 UTC
@@ -80,10 +79,8 @@ extern CTxMemPool mempool;
 extern std::map<uint256, CBlockIndex*> mapBlockIndex;
 extern std::set<std::pair<COutPoint, unsigned int> > setStakeSeen;
 extern CBlockIndex* pindexGenesisBlock;
-extern unsigned int nTargetSpacing;
 extern int nStakeMinConfirmations;
 extern unsigned int nStakeMinAge;
-extern unsigned int nTargetSpacing;
 extern unsigned int nNodeLifespan;
 extern int nCoinbaseMaturity;
 extern int nBestHeight;
