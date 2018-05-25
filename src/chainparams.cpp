@@ -89,6 +89,7 @@ public:
 		genesis.nBits = bnProofOfWorkLimit.GetCompact();
 		genesis.nNonce = 160569;
 
+                /*
 		if (true  && (genesis.GetHash() != hashGenesisBlock)) {
 
 		                // This will figure out a valid hash and Nonce if you're
@@ -104,12 +105,13 @@ public:
 		                           }
 		                       }
 		}
+                */
 
 		hashGenesisBlock = genesis.GetHash();
-		LogPrintf("genesis.nTime = %d\n", genesis.nTime);
-		LogPrintf("genesis.nNonce = %d\n", genesis.nNonce);
-		LogPrintf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
-		LogPrintf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
+              	//LogPrintf("genesis.nTime = %d\n", genesis.nTime);
+		//LogPrintf("genesis.nNonce = %d\n", genesis.nNonce);
+		//LogPrintf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+		//LogPrintf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
 
 		assert(genesis.hashMerkleRoot == uint256("0x9d0721d50597fe829775ab4b574251a7818c4822eb4d505d2fb217e588c426f0"));
 		assert(hashGenesisBlock == uint256("0x000059b00a8735812562b81dabdc4928ec1bab3abf3e806a942069656a002284"));
@@ -190,10 +192,10 @@ public:
 
 
 		hashGenesisBlock = genesis.GetHash();
-		LogPrintf("genesisTN.nTime = %d\n", genesis.nTime);
-		LogPrintf("genesisTN.nNonce = %d\n", genesis.nNonce);
-		LogPrintf("genesisTN.GetHash = %s\n", genesis.GetHash().ToString().c_str());
-		LogPrintf("genesisTN.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
+		//LogPrintf("genesisTN.nTime = %d\n", genesis.nTime);
+		//LogPrintf("genesisTN.nNonce = %d\n", genesis.nNonce);
+		//LogPrintf("genesisTN.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+		//LogPrintf("genesisTN.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
 
 		assert(hashGenesisBlock == uint256("0x000059b00a8735812562b81dabdc4928ec1bab3abf3e806a942069656a002284"));
 
